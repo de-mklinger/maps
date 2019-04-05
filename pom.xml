@@ -10,7 +10,7 @@
 
 	<groupId>de.mklinger.micro</groupId>
 	<artifactId>maps</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>bundle</packaging>
 
 	<name>${project.artifactId}</name>
@@ -49,7 +49,7 @@
 		<connection>scm:git:git@github.com:de-mklinger/maps.git</connection>
 		<developerConnection>scm:git:git@github.com:de-mklinger/maps.git</developerConnection>
 		<url>https://github.com/de-mklinger/maps</url>
-		<tag>HEAD</tag>
+		<tag>maps-1.0</tag>
 	</scm>
 
 	<dependencies>
