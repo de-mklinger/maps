@@ -17,6 +17,7 @@ package de.mklinger.micro.maps;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
@@ -41,6 +42,16 @@ public class Maps {
 	public static <K, V> HashMap<K, V> newHashMap(final int expectedSize) {
 		// See code in java.util.HashSet.HashSet(Collection<? extends E>)
 		return new HashMap<>(Math.max((int) (expectedSize / .75f) + 1, MIN_INITIAL_CAPACITY));
+	}
+
+	/**
+	 * Returns a LinkedHashMap with a capacity that is sufficient to keep the map
+	 * from being resized as long as it grows no larger than expectedSize with the
+	 * default load factor (0.75).
+	 */
+	public static <K, V> LinkedHashMap<K, V> newLinkedHashMap(final int expectedSize) {
+		// See code in java.util.HashSet.HashSet(Collection<? extends E>)
+		return new LinkedHashMap<>(Math.max((int) (expectedSize / .75f) + 1, MIN_INITIAL_CAPACITY));
 	}
 
 	/**
